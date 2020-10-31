@@ -1,8 +1,10 @@
 import CoreFoundation
 import Cdns_sd
 
+internal let kCFSocketReadCallBack = CFSocketCallBackType.readCallBack.rawValue
+
 #if !os(Linux)
-    internal let kCFSocketReadCallBack = CFSocketCallBackType.readCallBack.rawValue
+    //internal let kCFSocketReadCallBack = CFSocketCallBackType.readCallBack.rawValue
     internal let kCFRunLoopCommonModes = CFRunLoopMode.commonModes
 #endif
 
